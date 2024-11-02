@@ -1,5 +1,5 @@
 import HomeIcon from '@mui/icons-material/Home';
-import { AppBar, Box, Button, Toolbar } from '@mui/material';
+import { AppBar, Avatar, Box, Button, Toolbar } from '@mui/material';
 
 
 function NavBar() {
@@ -10,7 +10,7 @@ function NavBar() {
                 <Toolbar sx={{backgroundColor: '#062F4F'}}>
                     <Box sx={{
                         textAlign: 'center',
-                        position: 'absolute'
+                        // position: 'absolute'
                     }}>
                         <Button href='#Inicio'> 
                             <HomeIcon sx={{ 
@@ -55,6 +55,8 @@ function NavBar() {
                         </Button>
                     </Box>
 
+
+                    <Avatar alt="Leonardo Paz" src='src\assets\profile-pic.png'> LP </Avatar>
                 </Toolbar>
             </AppBar>
        
