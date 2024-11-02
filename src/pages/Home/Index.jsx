@@ -1,21 +1,12 @@
-import { Box, Typography } from "@mui/material"
+import AboutMe from '../../components/AboutMe/AboutMe'
+import Header from '../../components/Header/Header'
 
 function Index () {
 
     return (
         <>
-            <Box id='Inicio' sx={{
-                margin: 'auto',
-                height: '100vh',
-                alignContent: 'center'
-            }}>
-                <Typography variant="h1" sx={{fontSize: '60px'}}>
-                    LEONARDO FRANCISCO PAZ
-                </Typography>
-                <Typography variant="h5">
-                    Desarrollador Web FullStack / Project Manager
-                </Typography>
-            </Box>
+            <Header/>
+            <AboutMe/>
         </>
     )
 }
