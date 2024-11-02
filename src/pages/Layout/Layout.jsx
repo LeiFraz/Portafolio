@@ -1,11 +1,11 @@
 import { Outlet as Page } from "react-router-dom";
-import HomeIcon from '@mui/icons-material/Home';
+import NavBar from "../../components/NavBar/Navbar";
 
 function Layout() {
 
     return(
         <>
-            <HomeIcon color="success" fontSize="large"/>
+            <NavBar />
             <Page/>
         </>
     )
