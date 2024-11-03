@@ -9,9 +9,9 @@ function TechsAndTools() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                // height: '100vh',
+                height: '100vh',
                 pt: '90px',
-                // maxWidth: '700px',
+                maxWidth: '700px',
                 width: '100vw',
                 
             }}>

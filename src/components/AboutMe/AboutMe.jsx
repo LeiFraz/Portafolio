@@ -10,9 +10,9 @@ function AboutMe() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                // height: '100vh',
+                height: '100vh',
                 pt: '138px',
-                // maxWidth: '700px',
+                maxWidth: '700px',
                 width: '100vw',
                 
             }}>
