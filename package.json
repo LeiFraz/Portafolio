@@ -2,7 +2,7 @@
   "name": "portafolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://leifraz.github.io/portafolio/",
+  "homepage": "https://leifraz.github.io/portafolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
