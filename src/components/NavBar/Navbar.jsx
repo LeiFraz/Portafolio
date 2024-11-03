@@ -4,6 +4,20 @@ import { AppBar, Avatar, Box, Button, Toolbar } from '@mui/material';
 
 function NavBar() {
 
+    const desplazamiento = (e) => {
+        e.preventDefault();
+
+        const id = e.currentTarget.getAttribute('href');
+        const elemento = document.querySelector(id);
+
+        if (elemento) {
+            elemento.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return(
         <>
             <AppBar>
@@ -12,7 +26,7 @@ function NavBar() {
                         textAlign: 'center',
                         // position: 'absolute'
                     }}>
-                        <Button href='#Inicio'> 
+                        <Button href='#Inicio' onClick={desplazamiento}> 
                             <HomeIcon sx={{ 
                                 color: '#ddd', 
                                 "&:hover":{color: '#02C8A7'} 
@@ -26,7 +40,7 @@ function NavBar() {
                         margin: 'auto',
                         gap: '25px',
                     }}>
-                        <Button href='#SobreMi' sx={{
+                        <Button href='#SobreMi' onClick={desplazamiento} sx={{
                             p: '15px 25px',
                             color: 'white',
                             fontWeight: '700',
@@ -35,7 +49,16 @@ function NavBar() {
                         }}> 
                             SOBRE MI 
                         </Button>
-                        <Button href='#Proyectos' sx={{
+                        <Button href='#Tecnologias' onClick={desplazamiento} sx={{
+                            p: '15px 25px',
+                            color: 'white',
+                            fontWeight: '700',
+                            letterSpacing: '2px',
+                            "&:hover":{color: '#02C8A7'}/*#66B9BF, 66B9FF,#02C8A7*/
+                        }}> 
+                            TECNOLOGIAS 
+                        </Button>
+                        <Button href='#Proyectos' onClick={desplazamiento} sx={{
                             p: '10px 20px',
                             color: 'white',
                             fontWeight: '700',
@@ -44,7 +67,7 @@ function NavBar() {
                         }}> 
                             PROYECTOS
                         </Button>
-                        <Button href='#Contactame' sx={{
+                        <Button href='#Contactame' onClick={desplazamiento} sx={{
                             p: '10px 20px',
                             color: 'white',
                             fontWeight: '700',
