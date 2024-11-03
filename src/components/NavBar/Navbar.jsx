@@ -1,6 +1,6 @@
 import HomeIcon from '@mui/icons-material/Home';
 import { AppBar, Avatar, Box, Button, Toolbar } from '@mui/material';
-
+import perfil from '../../assets/profile-pic.png';
 
 function NavBar() {
 
@@ -79,7 +79,7 @@ function NavBar() {
                     </Box>
 
 
-                    <Avatar alt="Leonardo Paz" src='src\assets\profile-pic.png'> LP </Avatar>
+                    <Avatar alt="Leonardo Paz" src={perfil}> LP </Avatar>
                 </Toolbar>
             </AppBar>
        

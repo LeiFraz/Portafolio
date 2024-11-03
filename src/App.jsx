@@ -1,16 +1,15 @@
-import { BrowserRouter } from 'react-router-dom'
-import { Routes } from './routes/Routes'
-import './App.css'
+import { HashRouter as Router } from 'react-router-dom'; // Cambia BrowserRouter por HashRouter
+import { Routes } from './routes/Routes';
+import './App.css';
 
 function App() {
-
   return (
     <>
-      <BrowserRouter>
-        <Routes/>
-      </BrowserRouter>
+      <Router>
+        <Routes />
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

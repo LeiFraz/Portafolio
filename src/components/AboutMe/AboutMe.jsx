@@ -1,5 +1,7 @@
 import { Avatar, Box, Button, Typography } from "@mui/material"
-
+import cv from '../../assets/CV/CV Paz Leonardo.pdf'
+import linkedin from '../../assets/TechIcons/linkedin-icon-logo.png'
+import github from '../../assets/TechIcons/github9775-2427096616.jpg'
 
 function AboutMe() {
 
@@ -39,7 +41,7 @@ function AboutMe() {
                 </Box>
 
                 <Box sx={{pb: '50px'}}>
-                    <Button href="src\assets\CV\CV Paz Leonardo.pdf" download> 
+                    <Button href={cv} download> 
                         <Avatar sx={{
                             width: '55px',
                             height: '55px',
@@ -49,7 +51,7 @@ function AboutMe() {
                         }}>CV</Avatar>
                     </Button>
                     <Button href="https://www.linkedin.com/in/leonardofpaz/" target="_blank"> 
-                        <Avatar src="src\assets\TechIcons\linkedin-icon-logo.png" sx={{
+                        <Avatar src={linkedin} sx={{
                             width: '55px',
                             height: '55px',
                             transition: 'box-shadow 0.3s ease-in-out',
@@ -57,7 +59,7 @@ function AboutMe() {
                         }}/>
                     </Button>
                     <Button href="https://github.com/LeiFraz" target="_blank"> 
-                        <Avatar src="src\assets\TechIcons\github9775-2427096616.jpg" sx={{
+                        <Avatar src={github} sx={{
                             width: '55px',
                             height: '55px',
                             transition: 'box-shadow 0.3s ease-in-out',

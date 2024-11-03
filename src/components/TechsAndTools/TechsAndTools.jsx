@@ -1,4 +1,28 @@
 import { Avatar, Box, List, ListItem, ListItemIcon, Typography } from "@mui/material"
+import angular from '../../assets/TechIcons/angular-logo.png'
+import axios from '../../assets/TechIcons/axios-logo.png'
+import bootstrap from '../../assets/TechIcons/bootstrap-logo.png'
+import canva from '../../assets/TechIcons/canva-logo.png'
+import css3 from '../../assets/TechIcons/css3.png'
+import figma from '../../assets/TechIcons/figma-logo.png'
+import github from '../../assets/TechIcons/github9775-2427096616.jpg'
+import html from '../../assets/TechIcons/html.png'
+import java from '../../assets/TechIcons/java.png'
+import javascript from '../../assets/TechIcons/JavaScript.png'
+import laravel from '../../assets/TechIcons/laravel-logo.png'
+import mariaDB from '../../assets/TechIcons/mariaDB-logo.png'
+import materialUI from '../../assets/TechIcons/material-ui-logo.png'
+import mongoDB from '../../assets/TechIcons/mongoDB-logo.png'
+import mysql from '../../assets/TechIcons/mysql-logo.png'
+import nodejs from '../../assets/TechIcons/nodejs-logo.png'
+import php from '../../assets/TechIcons/php.png'
+import postgresql from '../../assets/TechIcons/postgresql-logo.png'
+import postman from '../../assets/TechIcons/postman-logo.png'
+import react from '../../assets/TechIcons/react-logo.png'
+import sequelize from '../../assets/TechIcons/sequelize-logo.png'
+import thunderClient from '../../assets/TechIcons/thunder-client-logo.png'
+import trello from '../../assets/TechIcons/trello-logo.png'
+import typescript from '../../assets/TechIcons/typescript-logo.jpg'
 
 function TechsAndTools() {
 
@@ -41,42 +65,42 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/JavaScript.png"></Avatar>
+                                    <Avatar src={javascript}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/html.png"></Avatar>
+                                    <Avatar src={html}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/css3.png"></Avatar>
+                                    <Avatar src={css3}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/react-logo.png"> React</Avatar>
+                                    <Avatar src={react}> React</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/angular-logo.png"> Angular</Avatar>
+                                    <Avatar src={angular}> Angular</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/material-ui-logo.png"> MaterialUI</Avatar>
+                                    <Avatar src={materialUI}> MaterialUI</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/bootstrap-logo.png"> Bootsrap</Avatar>
+                                    <Avatar src={bootstrap}> Bootsrap</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/axios-logo.png"> Axios</Avatar>
+                                    <Avatar src={axios}> Axios</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                         </List>
@@ -95,52 +119,52 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/nodejs-logo.png"> Node.js</Avatar>
+                                    <Avatar src={nodejs}> Node.js</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/typescript-logo.jpg"> TypeScript</Avatar>
+                                    <Avatar src={typescript}> TypeScript</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/sequelize-logo.png"> Sequielize</Avatar>
+                                    <Avatar src={sequelize}> Sequielize</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/php.png"></Avatar>
+                                    <Avatar src={php}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/laravel-logo.png"> Laravel</Avatar>
+                                    <Avatar src={laravel}> Laravel</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/Java.png"></Avatar>
+                                    <Avatar src={java}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/postgresql-logo.png"> PostgreSQL </Avatar>
+                                    <Avatar src={postgresql}> PostgreSQL </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/mysql-logo.png"> MySQL</Avatar>
+                                    <Avatar src={mysql}> MySQL</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/mariaDB-logo.png"> MariaDB </Avatar>
+                                    <Avatar src={mariaDB}> MariaDB </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/mongoDB-logo.png"> MongoDB</Avatar>
+                                    <Avatar src={mongoDB}> MongoDB</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                         </List>
@@ -159,32 +183,32 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/github-logo.jpg"> Git & GitHub </Avatar>
+                                    <Avatar src={github}> Git & GitHub </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/trello-logo.png"> Trello </Avatar>
+                                    <Avatar src={trello}> Trello </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/postman-logo.png"> Postman </Avatar>
+                                    <Avatar src={postman}> Postman </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/thunder-client-logo.png"> ThunderClient </Avatar>
+                                    <Avatar src={thunderClient}> ThunderClient </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/figma-logo.png"> Figma </Avatar>
+                                    <Avatar src={figma}> Figma </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src="src/assets/TechIcons/canva-logo.png"> Canva </Avatar>
+                                    <Avatar src={canva}> Canva </Avatar>
                                 </ListItemIcon>
                             </ListItem>
 

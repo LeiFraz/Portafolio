@@ -1,5 +1,7 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
-
+import semillero from '../../assets/Projects/Semillero.jpg'
+import fishseason from '../../assets/Projects/FishSeason.png'
+import propmanager from '../../assets/Projects/PropManager.png'
 
 function Projects() {
 
@@ -31,7 +33,7 @@ function Projects() {
                 }}>
                     <CardMedia 
                         component='img'
-                        image="src\assets\Projects\Semillero.jpg"
+                        image={semillero}
                         alt=""
                         sx={{
                             width: '200px',
@@ -86,7 +88,7 @@ function Projects() {
                 }}>
                     <CardMedia 
                         component='img'
-                        image="src\assets\Projects\FishSeason.png"
+                        image={fishseason}
                         alt=""
                         sx={{
                             width: '200px',
@@ -143,7 +145,7 @@ function Projects() {
                 }}>
                     <CardMedia 
                         component='img'
-                        image="src\assets\Projects\PropManager.png"
+                        image={propmanager}
                         alt=""
                         sx={{
                             width: '200px',
