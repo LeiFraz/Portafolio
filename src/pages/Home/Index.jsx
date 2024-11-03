@@ -1,10 +1,16 @@
+import AboutMe from '../../components/AboutMe/AboutMe'
+import Header from '../../components/Header/Header'
+import Projects from '../../components/Projects/Projects'
+import TechsAndTools from '../../components/TechsAndTools/TechsAndTools'
 
 function Index () {
 
     return (
         <>
-            <h1> LEONARDO FRANCISCO PAZ </h1>
-            <p> Desarrollador Web FullStack / Project Manager </p>
+            <Header/>
+            <AboutMe/>
+            <TechsAndTools/>
+            <Projects/>
         </>
     )
 }
