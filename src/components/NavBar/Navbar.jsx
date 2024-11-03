@@ -67,7 +67,7 @@ function NavBar() {
                         }}> 
                             PROYECTOS
                         </Button>
-                        <Button href='#Contactame' onClick={desplazamiento} sx={{
+                        {/* <Button href='#Contactame' onClick={desplazamiento} sx={{
                             p: '10px 20px',
                             color: 'white',
                             fontWeight: '700',
@@ -75,7 +75,7 @@ function NavBar() {
                             "&:hover":{color: '#02C8A7'}
                         }}> 
                             CONTACTAME
-                        </Button>
+                        </Button> */}
                     </Box>
 
 
