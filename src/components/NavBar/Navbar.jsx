@@ -79,7 +79,7 @@ function NavBar() {
                     </Box>
 
 
-                    <Avatar alt="Leonardo Paz" src={perfil}> LP </Avatar>
+                    <Avatar alt="Foto de perfil Leonardo Paz" src={perfil}> LP </Avatar>
                 </Toolbar>
             </AppBar>
        

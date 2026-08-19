@@ -20,7 +20,7 @@ function Header() {
                     LEONARDO FRANCISCO PAZ
                 </Typography>
                 <Typography variant="h5">
-                    Desarrollador Web FullStack / Project Manager
+                    Desarrollador Full Stack con enfoque en gestión de proyectos
                 </Typography>
             </Box>
         </>

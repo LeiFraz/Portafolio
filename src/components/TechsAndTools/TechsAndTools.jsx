@@ -1,28 +1,28 @@
 import { Avatar, Box, List, ListItem, ListItemIcon, Typography } from "@mui/material"
-import angular from '../../assets/TechIcons/angular-logo.png'
-import axios from '../../assets/TechIcons/axios-logo.png'
+import angular from '../../assets/TechIcons/angular-logo.webp'
+import axios from '../../assets/TechIcons/axios-logo.webp'
 import bootstrap from '../../assets/TechIcons/bootstrap-logo.png'
-import canva from '../../assets/TechIcons/canva-logo.png'
-import css3 from '../../assets/TechIcons/css3.png'
-import figma from '../../assets/TechIcons/figma-logo.png'
-import github from '../../assets/TechIcons/github9775-2427096616.jpg'
-import html from '../../assets/TechIcons/html.png'
-import java from '../../assets/TechIcons/java.png'
+import canva from '../../assets/TechIcons/canva-logo.webp'
+import css3 from '../../assets/TechIcons/css3.webp'
+import figma from '../../assets/TechIcons/figma-logo.webp'
+import github from '../../assets/TechIcons/github9775-2427096616.webp'
+import html from '../../assets/TechIcons/html.webp'
+import java from '../../assets/TechIcons/java.webp'
 import javascript from '../../assets/TechIcons/JavaScript.png'
-import laravel from '../../assets/TechIcons/laravel-logo.png'
-import mariaDB from '../../assets/TechIcons/mariaDB-logo.png'
-import materialUI from '../../assets/TechIcons/material-ui-logo.png'
-import mongoDB from '../../assets/TechIcons/mongoDB-logo.png'
-import mysql from '../../assets/TechIcons/mysql-logo.png'
-import nodejs from '../../assets/TechIcons/nodejs-logo.png'
-import php from '../../assets/TechIcons/php.png'
-import postgresql from '../../assets/TechIcons/postgresql-logo.png'
-import postman from '../../assets/TechIcons/postman-logo.png'
+import laravel from '../../assets/TechIcons/laravel-logo.webp'
+import mariaDB from '../../assets/TechIcons/mariaDB-logo.webp'
+import materialUI from '../../assets/TechIcons/material-ui-logo.webp'
+import mongoDB from '../../assets/TechIcons/mongoDB-logo.webp'
+import mysql from '../../assets/TechIcons/mysql-logo.webp'
+import nodejs from '../../assets/TechIcons/nodejs-logo.webp'
+import php from '../../assets/TechIcons/php.webp'
+import postgresql from '../../assets/TechIcons/postgresql-logo.webp'
+import postman from '../../assets/TechIcons/postman-logo.webp'
 import react from '../../assets/TechIcons/react-logo.png'
-import sequelize from '../../assets/TechIcons/sequelize-logo.png'
-import thunderClient from '../../assets/TechIcons/thunder-client-logo.png'
-import trello from '../../assets/TechIcons/trello-logo.png'
-import typescript from '../../assets/TechIcons/typescript-logo.jpg'
+import sequelize from '../../assets/TechIcons/sequelize-logo.webp'
+import thunderClient from '../../assets/TechIcons/thunder-client-logo.webp'
+import trello from '../../assets/TechIcons/trello-logo.webp'
+import typescript from '../../assets/TechIcons/typescript-logo.webp'
 
 function TechsAndTools() {
 
@@ -65,42 +65,42 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={javascript}></Avatar>
+                                    <Avatar alt="Icono JavaScript" src={javascript}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={html}></Avatar>
+                                    <Avatar alt="Icono Html" src={html}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={css3}></Avatar>
+                                    <Avatar alt="Icono Css3" src={css3}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={react}> React</Avatar>
+                                    <Avatar alt="Icono React" src={react}> React</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={angular}> Angular</Avatar>
+                                    <Avatar alt="Icono Angular" src={angular}> Angular</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={materialUI}> MaterialUI</Avatar>
+                                    <Avatar alt="Icono MaterialUI" src={materialUI}> MaterialUI</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={bootstrap}> Bootsrap</Avatar>
+                                    <Avatar alt="Icono Bootsrap" src={bootstrap}> Bootsrap</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={axios}> Axios</Avatar>
+                                    <Avatar alt="Icono Axios" src={axios}> Axios</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                         </List>
@@ -119,52 +119,52 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={nodejs}> Node.js</Avatar>
+                                    <Avatar alt="Icono Node.js" src={nodejs}> Node.js</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={typescript}> TypeScript</Avatar>
+                                    <Avatar alt="Icono TypeScript" src={typescript}> TypeScript</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={sequelize}> Sequielize</Avatar>
+                                    <Avatar alt="Icono Sequielize" src={sequelize}> Sequielize</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={php}></Avatar>
+                                    <Avatar alt="Icono Php" src={php}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={laravel}> Laravel</Avatar>
+                                    <Avatar alt="Icono Laravel" src={laravel}> Laravel</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={java}></Avatar>
+                                    <Avatar alt="Icono Java" src={java}></Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={postgresql}> PostgreSQL </Avatar>
+                                    <Avatar alt="Icono Postresql" src={postgresql}> PostgreSQL </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={mysql}> MySQL</Avatar>
+                                    <Avatar alt="Icono Mysql" src={mysql}> MySQL</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={mariaDB}> MariaDB </Avatar>
+                                    <Avatar alt="Icono MariaDB" src={mariaDB}> MariaDB </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={mongoDB}> MongoDB</Avatar>
+                                    <Avatar alt="Icono MongoDB" src={mongoDB}> MongoDB</Avatar>
                                 </ListItemIcon>
                             </ListItem>
                         </List>
@@ -183,32 +183,32 @@ function TechsAndTools() {
                         }}>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={github}> Git & GitHub </Avatar>
+                                    <Avatar alt="Icono GitHub" src={github}> GitHub </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={trello}> Trello </Avatar>
+                                    <Avatar alt="Icono Trello" src={trello}> Trello </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={postman}> Postman </Avatar>
+                                    <Avatar alt="Icono Postman" src={postman}> Postman </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={thunderClient}> ThunderClient </Avatar>
+                                    <Avatar alt="Icono ThunderClient" src={thunderClient}> ThunderClient </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={figma}> Figma </Avatar>
+                                    <Avatar alt="Icono Figma" src={figma}> Figma </Avatar>
                                 </ListItemIcon>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <Avatar src={canva}> Canva </Avatar>
+                                    <Avatar alt="Icono Canva" src={canva}> Canva </Avatar>
                                 </ListItemIcon>
                             </ListItem>
 

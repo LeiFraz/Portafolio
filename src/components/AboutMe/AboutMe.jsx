@@ -1,9 +1,10 @@
 import { Avatar, Box, Button, Typography } from "@mui/material"
-import cv from '../../assets/CV/CV Paz Leonardo.pdf'
-import linkedin from '../../assets/TechIcons/linkedin-icon-logo.png'
-import github from '../../assets/TechIcons/github9775-2427096616.jpg'
+import linkedin from '../../assets/TechIcons/linkedin-icon-logo.webp'
+import github from '../../assets/TechIcons/github9775-2427096616.webp'
 
 function AboutMe() {
+
+    const cvUrl = `${import.meta.env.BASE_URL}CV/CV_Leonardo_Paz_FullStack_y_PM.pdf`;
 
     return(
         <>
@@ -12,7 +13,7 @@ function AboutMe() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                height: '100vh',
+                minHeight: '100vh',
                 pt: '138px',
                 maxWidth: '700px',
                 width: '100vw',
@@ -31,17 +32,38 @@ function AboutMe() {
                     backgroundColor: '#0B3C5D',
                     borderRadius: '10px',
                     p: '15px 20px',
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: '1rem',
                 }}>
-                    <Typography variant="p"> 
-                    Soy estudiante de Licenciatura en Informática y Analista Programador Universitario. Cuento con una sólida formación en Frontend y Backend, manejo diversos lenguajes y he trabajado con metodologías ágiles como SCRUM y RUP.<br></br><br></br>
-                    Me destaco por ser organizado, perseverante, responsable y simpático, por lo que siempre contribuyo en formar un excelente ambiente laboral. También a través de proyectos académicos y de un voluntariado como PM jr., he desarrollado otras habilidades como la gestión del tiempo, liderazgo y comunicación.
-                    Actualmente, me estoy capacitando como Desarrollador FullStack con la Fundación Pescar, buscando no solo aplicar mis habilidades, sino también seguir aprendiendo y creciendo en otras áreas técnicas. <br></br><br></br> 
-                    Mi Principal objetivo es integrarme en un equipo donde pueda aportar mis conocimientos y continuar mi desarrollo profesional.
+                    <Typography variant="h6">Perfil</Typography>
+                    <Typography component="p" variant="body1"> 
+                    Soy desarrollador Full Stack con formación universitaria en Informática y experiencia en desarrollo web, análisis funcional y coordinación de proyectos tecnológicos.
+                    </Typography>
+
+                    <Typography variant="h6">Experiencia técnica</Typography>
+                    <Typography component="p" variant="body1"> 
+                        A lo largo de distintos proyectos y experiencias laborales trabajé tanto en frontend como backend, utilizando tecnologías como React.js, JavaScript, Node.js, Express, APIs REST y bases de datos. También participé en análisis de requerimientos, integraciones entre sistemas, automatización de procesos, resolución de incidencias y documentación de soluciones. 
+                    </Typography>
+
+                    <Typography variant="h6">Gestión y trabajo en equipo</Typography>
+                    <Typography component="p" variant="body1">
+                        Mi experiencia como Analista Funcional y Project Manager me permitió complementar el desarrollo técnico con organización, comunicación y seguimiento de proyectos, trabajando junto a clientes y equipos de desarrollo, UX/UI y testing bajo metodologías ágiles como Scrum.
+                    </Typography>
+
+                    <Typography variant="h6">Forma de trabajar</Typography>
+                    <Typography component="p" variant="body1">
+                        Me considero una persona organizada, responsable y perseverante. Me adapto con facilidad a nuevas herramientas y formas de trabajo, y valoro mantener una buena comunicación y un ambiente de trabajo colaborativo.
+                    </Typography>
+
+                    <Typography variant="h6">Objetivo profesional</Typography>
+                    <Typography component="p" variant="body1">
+                        Mi objetivo es continuar desarrollándome profesionalmente dentro del sector tecnológico, participando en proyectos donde pueda aportar mis conocimientos, asumir nuevos desafíos y seguir ampliando mi experiencia.  
                     </Typography>
                 </Box>
 
                 <Box sx={{pb: '50px'}}>
-                    <Button href={cv} download> 
+                    <Button href={cvUrl} download aria-label="Descargar CV"> 
                         <Avatar sx={{
                             width: '55px',
                             height: '55px',
@@ -50,7 +72,7 @@ function AboutMe() {
                             '&:hover': { boxShadow: '0px 0px 5px #02C8A7'},
                         }}>CV</Avatar>
                     </Button>
-                    <Button href="https://www.linkedin.com/in/leonardofpaz/" target="_blank"> 
+                    <Button href="https://www.linkedin.com/in/leonardofpaz/" target="_blank" rel="noopener noreferrer" aria-label="Abrir mi perfil Linkedin"> 
                         <Avatar src={linkedin} sx={{
                             width: '55px',
                             height: '55px',
@@ -58,7 +80,7 @@ function AboutMe() {
                             '&:hover': { boxShadow: '0px 0px 5px #02C8A7'},
                         }}/>
                     </Button>
-                    <Button href="https://github.com/LeiFraz" target="_blank"> 
+                    <Button href="https://github.com/LeiFraz" target="_blank" rel="noopener noreferrer" aria-label="Abrir mi perfil Github"> 
                         <Avatar src={github} sx={{
                             width: '55px',
                             height: '55px',
