@@ -13,25 +13,23 @@ function AboutMe() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                minHeight: '100vh',
-                pt: '138px',
-                maxWidth: '700px',
-                width: '100vw',
-                
+                pt: {xs: '2.3rem', sm: '3rem' , md: '4rem'},
+                maxWidth: '750px',
+                width: '100%',
             }}>
                 <Typography variant="h2" sx={{
-                        fontSize: '45px',
-                        pb: '20px',
+                        fontSize: {xs: '1.6rem', sm: '2rem' , md: '3rem'},
+                        pb: '1.3rem',
                         fontWeight: 'bold'
                     }}> 
                         SOBRE MI 
                     </Typography>
                 <Box sx={{
-                    mb: '30px',
+                    mb: '2rem',
                     maxWidth: '700px',
                     backgroundColor: '#0B3C5D',
-                    borderRadius: '10px',
-                    p: '15px 20px',
+                    borderRadius: {xs: 0, sm: '1rem'},
+                    p: '1rem',
                     display: "flex",
                     flexDirection: "column",
                     gap: '1rem',
@@ -62,7 +60,7 @@ function AboutMe() {
                     </Typography>
                 </Box>
 
-                <Box sx={{pb: '50px'}}>
+                <Box sx={{pb: '3rem'}}>
                     <Button href={cvUrl} download aria-label="Descargar CV"> 
                         <Avatar sx={{
                             width: '55px',

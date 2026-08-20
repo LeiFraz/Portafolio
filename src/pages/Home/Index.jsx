@@ -4,13 +4,13 @@ import Projects from '../../components/Projects/Projects'
 import TechsAndTools from '../../components/TechsAndTools/TechsAndTools'
 
 function Index () {
-
+    //
     return (
         <>
             <Header/>
             <AboutMe/>
-            <TechsAndTools/>
             <Projects/>
+            <TechsAndTools/>
         </>
     )
 }

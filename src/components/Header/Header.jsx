@@ -11,15 +11,14 @@ function Header() {
                 // alignItems: 'center',
                 justifyContent: 'center',
                 height: '100vh',
-                width: '98.8vw', //por la barra de desplazamiento lateral
                 backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url(${fondo})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
-                <Typography variant="h1" sx={{fontSize: '60px', fontWeight: 'bold'}}>
+                <Typography variant="h1" sx={{fontSize: {xs: '2.3rem', sm: '3rem' , md: '4rem'}, fontWeight: 'bold'}}>
                     LEONARDO FRANCISCO PAZ
                 </Typography>
-                <Typography variant="h5">
+                <Typography component='p' variant="body1" sx={{fontSize: {xs:'1rem' ,sm:'1.2rem' , md: '1.5rem'}}}>
                     Desarrollador Full Stack con enfoque en gestión de proyectos
                 </Typography>
             </Box>
