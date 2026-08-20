@@ -15,7 +15,7 @@ function ProjectsCard ({ proyecto })
                 backgroundColor: '#0B3C5D',
                 borderRadius: {xs: 0, sm: '1rem'},
                 width: '100%',
-                maxWidth: '700px',
+                maxWidth: {xs: '700px', sm: '500px', md: '700px'},
                 overflow: 'hidden',
         }}>
             <Grid2 container spacing={3}>
@@ -52,15 +52,21 @@ function ProjectsCard ({ proyecto })
                     <Typography component='p' variant="body1">
                         <strong>Aprendizaje: </strong>{aprendizaje}
                     </Typography>
-                    <Grid2 container spacing={2} sx={{ justifyContent: 'center'}}>
+                    <Grid2 container spacing={2} 
+                        sx={{ 
+                            textAlign: 'center', 
+                    }}>
                         {links.map((item) => (
-                            <Grid2 key={item.label} size={{xs: 12, sm: 6, md: 3}}> 
+                            <Grid2 key={item.label} size={{xs: 'grow'}}> 
                                 <Button href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.ariaLabel} size="small"
                                     sx={{
-                                        p: '10px',
+                                        width: {xs: '100%', sm: '100%'},
+                                        textAlign: 'center',
+                                        p: {xs: '0.5rem', sm: '0.8rem', md:'1rem'},
                                         color: 'white',
                                         fontWeight: '700',                                        
-                                        "&:hover":{color: '#02C8A7', background: '#1d5479'}
+                                        "&:hover":{color: '#02C8A7', background: '#1d5479'},
+                                        backgroundColor: '#16537c',
                                 }}
                                 >
                                     Ir a {item.label}
