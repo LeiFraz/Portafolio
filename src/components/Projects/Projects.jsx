@@ -21,7 +21,7 @@ function Projects() {
                         fontWeight: 'bold',
                         mb: '30px'
                 }}> 
-                    PROJECTS
+                    PROJECTOS
                 </Typography>
                 
                 {proyectos.map((item) => (
