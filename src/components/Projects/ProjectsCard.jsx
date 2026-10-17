@@ -1,84 +1,128 @@
-import { Box, Button, Typography, Grid2 } from "@mui/material";
-//import proyecto from '../../data/projects.js'
+/* eslint-disable react/prop-types -- Project data comes from the local data module. */
+import { useEffect, useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { Box, Button, Typography } from "@mui/material";
 
-function ProjectsCard ({ proyecto })
-{
-    const {titulo, problema, rol, tecnologias, aprendizaje, links, imagen, imagenAlt} = proyecto;
+function ProjectsCard({ proyecto }) {
+    const { titulo, problema, rol, tecnologias, aprendizaje, links, imagen, imagenAlt } = proyecto;
+    const [isOpen, setIsOpen] = useState(false);
+    const cardRef = useRef(null);
+    const dialogRef = useRef(null);
+    const ignoreNextFocusRef = useRef(false);
+    const detailsId = useId();
+    const titleId = useId();
+
+    useEffect(() => {
+        if (!isOpen) return;
+
+        function closeOutside(event) {
+            if (!cardRef.current?.contains(event.target) && !dialogRef.current?.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+
+        function closeOnBlur(event) {
+            if (!cardRef.current?.contains(event.target) && !dialogRef.current?.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+
+        function closeOnEscape(event) {
+            if (event.key === 'Escape') {
+                setIsOpen(false);
+                ignoreNextFocusRef.current = true;
+                cardRef.current?.querySelector('button')?.focus();
+            }
+        }
+
+        if (cardRef.current?.contains(document.activeElement)) dialogRef.current?.focus();
+        document.addEventListener('pointerdown', closeOutside);
+        document.addEventListener('focusin', closeOnBlur);
+        document.addEventListener('keydown', closeOnEscape);
+        return () => {
+            document.removeEventListener('pointerdown', closeOutside);
+            document.removeEventListener('focusin', closeOnBlur);
+            document.removeEventListener('keydown', closeOnEscape);
+        };
+    }, [isOpen]);
 
     return (
-        <Box 
-            sx={{ 
-                //margin: 'auto',
-                flexGrow: 1,
-                mb:5,
-                p:1,
-                backgroundColor: '#0B3C5D',
-                borderRadius: {xs: 0, sm: '1rem'},
-                width: '100%',
-                maxWidth: {xs: '700px', sm: '500px', md: '700px'},
-                overflow: 'hidden',
-        }}>
-            <Grid2 container spacing={3}>
-                <Grid2 size={{xs: 12, md: 4}} >
-                    <img src={imagen} alt={imagenAlt} 
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            display: 'block',
-                            borderRadius: 15
-                        }}
-                    ></img>
-                </Grid2>
-                <Grid2 size={{xs: 12, md: 8}} 
-                    sx={{
-                        textAlign: 'left', 
-                        display: 'flex', 
-                        flexDirection: 'column',
-                        gap: 2
-                }}>
-                    <Typography component="h3" variant="h4">
-                        {titulo}
-                    </Typography>
-                    <Typography component='p' variant="body1">
-                        <strong>Problema: </strong>{problema}
-                    </Typography>
-                    <Typography component='p' variant="body1">
-                        <strong>Rol: </strong>{rol}
-                    </Typography>
-                    <Typography component='p' variant="body1">
-                        <strong>Tecnologias: </strong>{tecnologias.join(', ')}
-                    </Typography>
-                    <Typography component='p' variant="body1">
-                        <strong>Aprendizaje: </strong>{aprendizaje}
-                    </Typography>
-                    <Grid2 container spacing={2} 
-                        sx={{ 
-                            textAlign: 'center', 
-                    }}>
-                        {links.map((item) => (
-                            <Grid2 key={item.label} size={{xs: 'grow'}}> 
-                                <Button href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.ariaLabel} size="small"
-                                    sx={{
-                                        width: {xs: '100%', sm: '100%'},
-                                        textAlign: 'center',
-                                        p: {xs: '0.5rem', sm: '0.8rem', md:'1rem'},
-                                        color: 'white',
-                                        fontWeight: '700',                                        
-                                        "&:hover":{color: '#02C8A7', background: '#1d5479'},
-                                        backgroundColor: '#16537c',
-                                }}
-                                >
-                                    Ir a {item.label}
-                                </Button>
-                            </Grid2>
-                        ))}
-                    </Grid2>
-                </Grid2>
-            </Grid2>
+        <>
+        <Box
+            component="article"
+            ref={cardRef}
+            className="project-card"
+            onFocus={() => {
+                if (ignoreNextFocusRef.current) {
+                    ignoreNextFocusRef.current = false;
+                    return;
+                }
+                setIsOpen(true);
+            }}
+        >
+            <button
+                type="button"
+                className="project-visual"
+                aria-label={`Ver detalles de ${titulo}`}
+                aria-expanded={isOpen}
+                aria-controls={detailsId}
+                onClick={() => setIsOpen(true)}
+            >
+                <img className="project-image" src={imagen} alt={imagenAlt} loading="lazy" />
+                <span className="project-more-info">Más info</span>
+            </button>
         </Box>
-    )
-
+        {isOpen && createPortal(
+                <Box className="project-overlay">
+                    <Box className="project-backdrop" onClick={() => setIsOpen(false)} />
+                    <Box
+                        component="article"
+                        id={detailsId}
+                        ref={dialogRef}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby={titleId}
+                        tabIndex={-1}
+                        className="project-card-expanded"
+                        onMouseLeave={() => {
+                            if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                                setIsOpen(false);
+                            }
+                        }}
+                    >
+                        <button
+                            type="button"
+                            className="project-close"
+                            aria-label={`Cerrar detalles de ${titulo}`}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            ×
+                        </button>
+                        <Box className="project-card-scroll">
+                            <Box className="project-expanded-visual">
+                                <img className="project-image" src={imagen} alt={imagenAlt} />
+                            </Box>
+                            <Box className="project-content">
+                                <Typography id={titleId} component="h3" sx={{fontSize: {xs: '1.6rem', md: '2rem'}, mb: 2}}>{titulo}</Typography>
+                                <Typography component="p" sx={{mb: 1.5}}><strong>Problema: </strong>{problema}</Typography>
+                                <Typography component="p" sx={{mb: 1.5}}><strong>Rol: </strong>{rol}</Typography>
+                                <Typography component="p" sx={{mb: 1.5}}><strong>Tecnologías: </strong>{tecnologias.join(', ')}</Typography>
+                                <Typography component="p"><strong>Aprendizaje: </strong>{aprendizaje}</Typography>
+                                <Box className="project-links">
+                                    {links.map((item) => (
+                                        <Button key={item.label} href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.ariaLabel}>
+                                            Ir a {item.label}
+                                        </Button>
+                                    ))}
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Box>,
+                document.body
+        )}
+        </>
+    );
 }
 
 export default ProjectsCard;

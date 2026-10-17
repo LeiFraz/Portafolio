@@ -7,60 +7,38 @@ function AboutMe() {
     const cvUrl = `${import.meta.env.BASE_URL}CV/CV_Leonardo_Paz_FullStack_y_PM.pdf`;
 
     return(
-        <>
-            <Box id='SobreMi' sx={{
-                margin: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                pt: {xs: '2.3rem', sm: '3rem' , md: '4rem'},
-                maxWidth: '750px',
-                width: '100%',
-            }}>
-                <Typography variant="h2" sx={{
-                        fontSize: {xs: '1.6rem', sm: '2rem' , md: '3rem'},
-                        pb: '1.3rem',
-                        fontWeight: 'bold'
-                    }}> 
+            <Box component="section" id='SobreMi' className="content-section">
+                <Typography component="h2" className="section-title" sx={{fontSize: {xs: '2rem', md: '3rem'}}}>
                         SOBRE MI 
-                    </Typography>
-                <Box sx={{
-                    mb: '2rem',
-                    maxWidth: '700px',
-                    backgroundColor: '#0B3C5D',
-                    borderRadius: {xs: 0, sm: '1rem'},
-                    p: '1rem',
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: '1rem',
-                }}>
-                    <Typography variant="h6">Perfil</Typography>
-                    <Typography component="p" variant="body1"> 
+                </Typography>
+                <Box className="about-grid">
+                    <Typography component="p" className="about-lead">
                     Soy desarrollador Full Stack con formación universitaria en Informática y experiencia en desarrollo web, análisis funcional y coordinación de proyectos tecnológicos.
                     </Typography>
-
-                    <Typography variant="h6">Experiencia técnica</Typography>
-                    <Typography component="p" variant="body1"> 
+                    <Box className="about-details">
+                    <Box><Typography component="h3">Experiencia técnica</Typography>
+                    <Typography component="p">
                         A lo largo de distintos proyectos y experiencias laborales trabajé tanto en frontend como backend, utilizando tecnologías como React.js, JavaScript, Node.js, Express, APIs REST y bases de datos. También participé en análisis de requerimientos, integraciones entre sistemas, automatización de procesos, resolución de incidencias y documentación de soluciones. 
-                    </Typography>
+                    </Typography></Box>
 
-                    <Typography variant="h6">Gestión y trabajo en equipo</Typography>
-                    <Typography component="p" variant="body1">
+                    <Box><Typography component="h3">Gestión y trabajo en equipo</Typography>
+                    <Typography component="p">
                         Mi experiencia como Analista Funcional y Project Manager me permitió complementar el desarrollo técnico con organización, comunicación y seguimiento de proyectos, trabajando junto a clientes y equipos de desarrollo, UX/UI y testing bajo metodologías ágiles como Scrum.
-                    </Typography>
+                    </Typography></Box>
 
-                    <Typography variant="h6">Forma de trabajar</Typography>
-                    <Typography component="p" variant="body1">
+                    <Box><Typography component="h3">Forma de trabajar</Typography>
+                    <Typography component="p">
                         Me considero una persona organizada, responsable y perseverante. Me adapto con facilidad a nuevas herramientas y formas de trabajo, y valoro mantener una buena comunicación y un ambiente de trabajo colaborativo.
-                    </Typography>
+                    </Typography></Box>
 
-                    <Typography variant="h6">Objetivo profesional</Typography>
-                    <Typography component="p" variant="body1">
+                    <Box><Typography component="h3">Objetivo profesional</Typography>
+                    <Typography component="p">
                         Mi objetivo es continuar desarrollándome profesionalmente dentro del sector tecnológico, participando en proyectos donde pueda aportar mis conocimientos, asumir nuevos desafíos y seguir ampliando mi experiencia.  
-                    </Typography>
+                    </Typography></Box>
+                    </Box>
                 </Box>
 
-                <Box sx={{pb: '3rem'}}>
+                <Box className="social-links">
                     <Button href={cvUrl} download aria-label="Descargar CV"> 
                         <Avatar sx={{
                             width: '55px',
@@ -85,11 +63,9 @@ function AboutMe() {
                             transition: 'box-shadow 0.3s ease-in-out',
                             '&:hover': { boxShadow: '0px 0px 5px #02C8A7'},
                         }}/>
-                        {/* src\assets\github9775-2427096616.jpg | src/assets/GitHub.png*/}
                     </Button>
                 </Box>
             </Box>
-        </>
     )
 }
 
