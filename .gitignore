@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Agentes, Skills, docs
+/.agents
+/.opencode
+/docs
+AGENTS.md
+MEMORY.md

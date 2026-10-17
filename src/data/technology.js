@@ -28,7 +28,7 @@ const tecnologias = [
         titulo: 'Front',
         tecnologiasData: [
             {
-                titulo: javascript,
+                titulo: 'JavaScript',
                 fuente: javascript
             },
             {

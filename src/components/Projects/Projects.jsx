@@ -1,35 +1,34 @@
-import { Box, Typography } from "@mui/material"
+import { useState } from 'react'
+import { Box, Button, Typography } from "@mui/material"
 import ProjectsCard from "./ProjectsCard.jsx"
 import proyectos from '../../data/projects.js'
 
 function Projects() {
-    
+    const [showAll, setShowAll] = useState(false)
+    const hasMoreProjects = proyectos.length > 4
+    const visibleProjects = showAll ? proyectos : proyectos.slice(0, 4)
+
     return(
-        <>
-            <Box id='Proyectos' 
-                sx={{
-                    width: '100%',
-                    maxWidth: '750px',
-                    mx: 'auto',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-            }}>
-                <Typography variant="h2" 
-                    sx={{
-                        fontSize: {xs: '1.6rem', sm: '2rem' , md: '3rem'},
-                        fontWeight: 'bold',
-                        mb: '30px'
-                }}> 
-                    PROJECTOS
+            <Box component="section" id='Proyectos' className="content-section">
+                <Typography component="h2" className="section-title" sx={{fontSize: {xs: '2rem', md: '3rem'}}}>
+                    PROYECTOS
                 </Typography>
-                
-                {proyectos.map((item) => (
-                <ProjectsCard key={item.id} proyecto={item}></ProjectsCard>
+                <Box className="project-list">
+                {visibleProjects.map((item, index) => (
+                <ProjectsCard key={`${item.id}-${index}`} proyecto={item}></ProjectsCard>
                 ))}
+                </Box>
+                {hasMoreProjects && (
+                    <Button
+                        className="projects-toggle"
+                        variant="outlined"
+                        onClick={() => setShowAll(!showAll)}
+                        aria-expanded={showAll}
+                    >
+                        {showAll ? 'Cerrar' : 'Ver más proyectos'}
+                    </Button>
+                )}
             </Box>
-            
-        </>
     )
 }
 
